@@ -17,9 +17,9 @@ function renderBilibiliCard(data, lang) {
       }
       items = [
         constructItem(94, 44, `${name}的 B 站数据`, 'title', 18),
-        constructItem(55, 84, `关注数`, 'label', 13.5),
-        constructItem(203, 84, `播放量`, 'label', 13.5),
-        constructItem(55, 119, `点赞数`, 'label', 13.5),
+        constructItem(55, 84, `粉丝数`, 'label', 13.5),
+        constructItem(203, 84, `播放数`, 'label', 13.5),
+        constructItem(55, 119, `获赞数`, 'label', 13.5),
         constructItem(203, 119, `等级`, 'label', 13.5),
         constructItem(55, 154, `签名`, 'label', 13.5),
         constructItem(126, 84, `${fans}`, 'value', 15),

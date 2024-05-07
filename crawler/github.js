@@ -26,7 +26,7 @@ async function getGitHubInfo(username) {
       config
     );
     let userInfo = res.data;
-    result.name = userInfo.name;
+    result.name = userInfo.login;
     result.followers = userInfo.followers;
     result.following = userInfo.following;
     result.repos = userInfo.public_repos;
