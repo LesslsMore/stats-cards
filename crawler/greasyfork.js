@@ -1,7 +1,7 @@
 var axios = require('axios');
 const cheerio = require('cheerio');
 
-async function getgGeasyforkInfo(name) {
+async function getGeasyforkInfo(name) {
 
   var config = {
     method: 'get',
@@ -37,7 +37,8 @@ async function getgGeasyforkInfo(name) {
       results.push(result)
     });
     // console.log(results)
-    return results
+    results.sort((a, b) => parseInt(b.totalInstalls.replace(/,/g, '')) - parseInt(a.totalInstalls.replace(/,/g, '')));
+    return results.slice(0, 2)
   } catch (error) {
     console.log(error);
   }
@@ -49,7 +50,7 @@ async function getgGeasyforkInfo(name) {
 // }
 // )
 
-module.exports = getgGeasyforkInfo;
+module.exports = getGeasyforkInfo;
 
 // document.querySelector('#user-script-list');
 //

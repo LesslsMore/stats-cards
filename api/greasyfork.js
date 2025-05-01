@@ -1,4 +1,4 @@
-const getgGeasyforkInfo = require('../crawler/greasyfork');
+const getGeasyforkInfo = require('../crawler/greasyfork');
 const renderGreasyforkCard = require('../render/greasyfork');
 const { cacheTime, cache } = require('../common/cache');
 const { processData } = require('../common/utils');
@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
   let key = 'c' + id;
   let data = cache.get(key);
   if (!data) {
-    data = await getgGeasyforkInfo(id);
+    data = await getGeasyforkInfo(id);
     cache.set(key, data);
   }
   if (raw) {
