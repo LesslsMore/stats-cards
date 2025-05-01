@@ -11,6 +11,8 @@ const greasyfork = require('./api/greasyfork');
 const nowcoder = require('./api/nowcoder');
 const github = require('./api/github');
 const mycard = require('./api/mycard');
+const steam = require('./api/steam');
+const codeforces = require('./api/codeforces');
 const website = require('./api/website');
 const path = require('path');
 const { cacheTime } = require('./common/cache');
@@ -25,6 +27,8 @@ app.use('/api/nowcoder', nowcoder);
 app.use('/api/github', github);
 app.use('/api/website', website);
 app.use('/api/mycard',mycard);
+app.use('/api/steam',steam);
+app.use('api/codeforces', codeforces)
 
 app.use(
   serveStatic(path.join(__dirname, 'public'), {

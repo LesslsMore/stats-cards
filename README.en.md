@@ -46,7 +46,7 @@ Currently, we support the following websites, PR is welcomed:
 - [x] NowCoder
 - [x] CSDN
 - [x] GitHub
-- [ ] Steam
+- [x] Steam
 - [ ] NetEase Music
 - [x] Custom Website Monitoring
 
@@ -127,6 +127,10 @@ Nowcoder: `https://stats.justsong.cn/api/nowcoder?id=6484283`
 
 ![牛客数据](https://stats.justsong.cn/api/nowcoder?id=6484283)
 
+Steam: `https://stats.justsong.cn/api/steam`
+
+![Steam数据](https://stats.justsong.cn/api/steam)
+
 ## Deployment
 
 You can deploy through Vercel, or deploy to your own server.
@@ -137,9 +141,11 @@ When deploying, there are some environment variables that can be set, all of whi
 
 1. `BILIBILI_SESSDATA`: Bilibili's `SESSDATA` cookie.
 2. `GITHUB_TOKEN`: GitHub token.
-3. `CACHE_TIME`: cache time, the unit is second, default value is  `6000`, namely 100 minutes.
-4. `MAX_CACHE_ITEMS`: maximum cache items, default value is `1024`.
-5. `PORT`: service port number, default value is `3000`.
+3. `STEAM_ID`: Steam personal ID, use browser to login Steam, then click personal profile, the id behind the profiles in the URL is the STEAM_ID
+4. `STEAM_API_TOKEN`: According the link to get the token，https://steamcommunity.com/dev/apikey
+5. `CACHE_TIME`: cache time, the unit is second, default value is  `6000`, namely 100 minutes.
+6. `MAX_CACHE_ITEMS`: maximum cache items, default value is `1024`.
+7. `PORT`: service port number, default value is `3000`.
 
 ### Deploy to Vercel
 
